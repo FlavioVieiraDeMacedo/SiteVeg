@@ -6,7 +6,10 @@
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
+.row {
+    margin-right: 0px !important;
+}
+    .dl-horizontal dt {
     white-space: normal;
 }
 
@@ -62,13 +65,13 @@ li.link-active a:focus {
     
     .body-content {
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 0px;
     }
 }
 @media (min-width: 768px) {
     .body-content {
         padding-left: 10px;
-        padding-right: 50px;
+        padding-right: 0px;
     }
 
     .imagem-fundo {

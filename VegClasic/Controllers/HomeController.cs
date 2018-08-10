@@ -14,10 +14,10 @@ namespace VegClasic.Controllers
         public ActionResult Index(string pesquisa="")
         {
             return View(db.Produtos.ToList().Where(
-                                                    p=>p.Nome.Contains(pesquisa)|| 
-                                                       p.Local.Contains(pesquisa)||
-                                                       p.Tipo.Contains(pesquisa)||
-                                                       p.Descricao.Contains(pesquisa)).OrderByDescending(x => x.Nome).Take(15));
+                                                    p=>p.Nome.ToLower().Contains(pesquisa.ToLower())|| 
+                                                       p.Local.ToLower().Contains(pesquisa.ToLower()) ||
+                                                       p.Tipo.ToLower().Contains(pesquisa.ToLower()) ||
+                                                       p.Descricao.ToLower().Contains(pesquisa.ToLower())).OrderByDescending(x => x.Nome).Take(15));
 
         }
     }
